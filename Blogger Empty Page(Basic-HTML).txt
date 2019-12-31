@@ -1,0 +1,251 @@
+<!-- Designed & Crafted by AURO -->
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateUrl='indie.xml' b:templateVersion='1.3.0' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+  <head>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+    <title>NEW YEAR 2020</title>
+    <b:skin><![CDATA[/*
+---------------------------------
+Name    :  New Year Wishing Website
+Designer: Auro
+URL     : 
+Contact : www.instagram.com/auroprasad0/
+---------------------------------
+]]></b:skin>
+  </head>
+
+  <style>
+      /* CSS */
+/* Total Body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Total Body */
+
+/* Body */
+body{
+    background-image: radial-gradient(rgb(205, 122, 226), lightblue); 
+}
+/* Body */
+
+/* Paragraph */
+p{
+    color: rgb(219, 59, 59);
+    font-family: verdana;
+    text-align: center;
+    font-weight: 1000;
+    margin: 0;
+    padding: 0;
+}
+
+.newyear{
+    line-height: 150%;
+    font-size: 8vw;
+    margin: 75px 100px 50px 100px;
+}
+
+.year{
+    line-height: 100px;
+    font-size: 8vw;
+    color: rgb(230, 10, 76);
+    margin-bottom: 50px;
+}
+
+/* Timer */
+#demo{
+   line-height: 100px;
+   font-size: 3vw;
+   color: rgb(0, 0, 0);
+   padding: 0;
+   margin: 0px 500px;
+   background-image: linear-gradient(45deg, rgb(180, 180, 180), rgb(202, 153, 153)); 
+   border: 3px groove rgb(211, 214, 216);
+   border-radius: 25px;
+   font-family: verdana; 
+   text-shadow: rgb(94, 84, 84)(97, 79, 79);
+}
+/* Timer */
+
+/* Text */
+.text{
+    line-height: 100px;
+    font-size: 3vw;
+    background: rgb(238, 194, 194);
+    font-family: verdana;
+    color: rgb(51, 48, 43);
+    border: 2px groove lightslategray;
+    border-radius: 10px;
+    padding: 0;
+    margin: 100px;
+}
+/* Text */
+/* Paragraph */
+
+/* Span for animation */
+span{
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    transform: translateX(50px);
+    dispaly: inline-block;
+}
+
+span.fade{
+    opacity: 1;
+    transform: translateX(10px);
+}
+/* Spin for animation */
+
+/* Glowing text for year 2020 */
+.year{
+    -webkit-animation: glow 1s ease-in-out infine alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from{
+        text-shadow: 0 0 10px rgb(37, 29, 29), 0 0 20px rgb(75, 69, 69), 0 0 30px;
+    }
+    to {
+        text-shadow: 0 0 20px rgb(134, 110, 110);
+    }
+}
+@media screen and (min-width: 1080px) {
+p.newyear{
+    text-shadow: 5px 2px rgb(221, 96, 96);
+}
+}
+/* Glowing text for year 2020 */
+
+
+/* For Mobile Phone */
+@media screen and (max-width: 1080px) {
+    p.newyear{
+        font-size: 50px;
+        text-shadow: 2px 3px rgb(83, 48, 48);
+        margin: 50px 0px 30px 0px;
+    }
+    p.year{
+        font-size: 60px;
+    }
+    p#demo{
+        font-size: 40px;
+        margin: 0px 50px;
+        background-image: linear-gradient(rgb(136, 121, 201), rgb(158, 213, 226));
+        border: 2px groove lightgoldenrodyellow;
+    }
+    p.text{
+        font-size: 4vw;
+        padding: 0;
+        margin: 100px 10px;
+        
+    }
+}
+/* For Mobile Phone */
+
+/* Footer */
+.footer{
+    left:0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.footer a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+  </style>
+
+  <body>
+     <p class="newyear">HAPPY NEW YEAR</p>
+    <p class="year">2020</p>
+    <p id="demo"></p>
+    <p class="text">
+         <strong>2020 Not an other year to just pass the time.</strong> In this amazing time hoping this year will be the beginning to make your 2020s decade awesome ;-)
+    </p>
+    <footer class="footer"><p>Designed by <a href="auroprasadsahu.blogspot.com">AURO</a> <a href="https://www.instagram.com/auroprasad0/">AURO(Instagram)</a></p></footer>
+    <!--JavaScript-->
+    <script>
+        //JavaScript
+//Greetings with Name
+var name = prompt("Hey!! WELCOME:) I'm AURO\nWhat's your name:");
+if(name=="null" || name==""){
+    name = "Dear";
+}
+alert('Hiii ' + name + '\nLooking forward to have a WONDERFUL year with you :-)');
+
+//Year animation
+const text = document.querySelector(".newyear");
+const strText = text.textContent;
+const splitText = strText.split("");
+text.textContent = "";
+for(let i=0; i < splitText.length; i++){
+    text.innerHTML += "<span>"+ splitText[i] + "</span>";
+}
+
+let char = 0;
+let timer = setInterval(onTick, 50);
+
+function onTick(){
+    const span = text.querySelectorAll('span')[char];
+    span.classList.add('fade');
+    char++
+    if(char === splitText.length){
+        complete();
+        return;
+    }
+}
+
+function complete(){
+    clearInterval(timer);
+    timer = null;
+}
+
+//For Countdown timer
+//Setting the Date & Time
+var countDownDate = new Date("Jan 1, 2020 12:00:00").getTime();
+
+//Update every 1s
+var x = setInterval(function() {
+    //Get Today's Date & Time
+    var now = new Date().getTime();
+    //Find the difference between now and set time
+    var distance = countDownDate - now;
+    //Time calculation for days, hours, minutes & seconds
+    var days = Math.floor(distance / (1000*60*60*24));
+    var hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+    var minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+    var seconds = Math.floor((distance % (1000*60)) / 1000);
+
+    //Display the result
+    document.getElementById("demo").innerHTML = days +"d "+hours +"h "+ minutes + "m "+ seconds + "s";
+
+    //If the countdown is finished
+    if(distance < 0){
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "Happy 2020";
+    }
+}, 1000);
+    </script>
+   <!-- <script src="app.js"></script> -->
+    <!--JavaScript-->
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
