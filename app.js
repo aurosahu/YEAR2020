@@ -35,7 +35,7 @@ function complete(){
 
 //For Countdown timer
 //Setting the Date & Time
-var countDownDate = new Date("Jan 1, 2020 12:00:00").getTime();
+var countDownDate = new Date("Dec 31, 2019 23:59:59").getTime();
 
 //Update every 1s
 var x = setInterval(function() {
